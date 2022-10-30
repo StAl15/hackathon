@@ -68,8 +68,9 @@ class AddCard : Fragment() {
         btnSave.setOnClickListener {
             insertDataToDatabase(
                 addNameCardEt.text.toString(),
-                descEt.text.toString(),
-                toByteArray(cardImage)
+                toByteArray(cardImage),
+                descEt.text.toString()
+
             )
         }
 
@@ -146,9 +147,9 @@ class AddCard : Fragment() {
         return view
     }
 
-    private fun insertDataToDatabase(cardName: String, desc: String, image: ByteArray) {
+    private fun insertDataToDatabase(cardName: String,image: ByteArray ,desc: String) {
         if (inputCheck(cardName, desc)) {
-            val card = CardModel(card_name = cardName, description = desc, card_image = image)
+            val card = CardModel(card_name = cardName, card_image = image, description = desc)
             mCardViewModel.addCard(card)
             view?.let { Snackbar.make(it, "Сохранено", Snackbar.LENGTH_LONG).show() }
             findNavController().navigate(R.id.action_addCard_to_collection2)

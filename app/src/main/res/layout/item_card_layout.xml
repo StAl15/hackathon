@@ -19,8 +19,8 @@
 
         <ImageView
             android:id="@+id/imgcard1"
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
+            android:layout_width="@dimen/_120sdp"
+            android:layout_height="@dimen/_150sdp"
 
             />
 
@@ -55,8 +55,8 @@
 
         <ImageView
             android:id="@+id/imgcard2"
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
+            android:layout_width="@dimen/_120sdp"
+            android:layout_height="@dimen/_150sdp"
 
             />
 
