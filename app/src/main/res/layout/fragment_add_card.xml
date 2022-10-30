@@ -1,0 +1,131 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/wh"
+    tools:context=".AddCard">
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/backBtnAdd"
+        style="@style/Widget.Material3.Button"
+        android:layout_width="@dimen/_55sdp"
+        android:layout_height="@dimen/_40sdp"
+        android:layout_marginTop="@dimen/_10sdp"
+        android:backgroundTint="@color/white"
+        app:icon="@drawable/ic_round_arrow_back_ios_new_24"
+        app:iconTint="@color/black"
+        app:layout_constraintStart_toStartOf="@+id/addPhoto"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <com.google.android.material.card.MaterialCardView
+        android:id="@+id/addPhoto"
+        style="@style/Widget.Material3.CardView.Filled"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_200sdp"
+        android:layout_marginTop="@dimen/_10sdp"
+        android:layout_marginHorizontal="@dimen/_20sdp"
+        android:backgroundTint="@color/white"
+        app:cardCornerRadius="@dimen/_30sdp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/backBtnAdd">
+
+        <ImageView
+            android:id="@+id/cardImage"
+            android:layout_width="@dimen/_80sdp"
+            android:layout_height="@dimen/_80sdp"
+            android:layout_gravity="center"
+            android:layout_marginBottom="@dimen/_10sdp"
+            android:src="@drawable/ic_baseline_add_a_photo_24" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginTop="@dimen/_55sdp"
+            android:fontFamily="@font/gothampro"
+            android:text="Добавьте фото"
+            android:textColor="@color/black"
+            android:textSize="@dimen/_15ssp" />
+    </com.google.android.material.card.MaterialCardView>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/addNameCardLayout"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_60sdp"
+        android:layout_marginHorizontal="@dimen/_20sdp"
+        android:layout_marginTop="@dimen/_20sdp"
+        android:hint="Название"
+        android:textColorHint="@color/black"
+        app:boxCornerRadiusBottomEnd="@dimen/_20sdp"
+        app:boxCornerRadiusBottomStart="@dimen/_20sdp"
+        app:boxCornerRadiusTopEnd="@dimen/_20sdp"
+        app:boxCornerRadiusTopStart="@dimen/_20sdp"
+        app:boxStrokeColor="@color/black"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/addPhoto">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/addNameCardEt"
+            android:maxLength="3000"
+            android:textSize="@dimen/_15ssp"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:fontFamily="@font/gothampro"
+            android:textColor="@color/black" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/addDescCardLayout"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:maxHeight="@dimen/_300sdp"
+        android:layout_marginHorizontal="@dimen/_20sdp"
+        android:layout_marginTop="@dimen/_10sdp"
+        android:hint="Описание"
+        android:textColorHint="@color/black"
+        app:boxCornerRadiusBottomEnd="@dimen/_20sdp"
+        app:boxCornerRadiusBottomStart="@dimen/_20sdp"
+        app:boxCornerRadiusTopEnd="@dimen/_20sdp"
+        app:boxCornerRadiusTopStart="@dimen/_20sdp"
+        app:boxStrokeColor="@color/black"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/addNameCardLayout">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/addDescCardEt"
+            android:layout_width="match_parent"
+            android:minHeight="@dimen/_60sdp"
+            android:maxHeight="@dimen/_120sdp"
+            android:maxLength="5000"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/gothampro"
+            android:textColor="@color/black" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.floatingactionbutton.ExtendedFloatingActionButton
+        android:id="@+id/btnSave"
+        style="@style/Widget.Material3.ExtendedFloatingActionButton.Icon.Primary"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="@dimen/_50sdp"
+        android:backgroundTint="@color/black"
+        android:fontFamily="@font/gothampro"
+        android:text="Сохранить"
+        android:textColor="@color/white"
+        app:iconTint="@color/white"
+        android:textSize="@dimen/_10ssp"
+        app:icon="@drawable/ic_baseline_add_24"
+        android:layout_marginTop="@dimen/_10sdp"
+        app:layout_constraintEnd_toEndOf="@+id/addDescCardLayout"
+        app:layout_constraintTop_toBottomOf="@+id/addDescCardLayout" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

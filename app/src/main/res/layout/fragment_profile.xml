@@ -1,0 +1,158 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/wh"
+    tools:context=".Profile">
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/_20sdp"
+        android:layout_marginTop="@dimen/_30sdp"
+        android:fontFamily="@font/gothampro_black"
+        android:text="Профиль"
+        android:textColor="@color/black"
+        android:textSize="@dimen/_25ssp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/sign_out"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginRight="@dimen/_10sdp"
+        android:backgroundTint="@color/wh"
+        android:fontFamily="@font/gothampro"
+        android:text="Выйти"
+        android:textColor="@color/black"
+        android:textSize="@dimen/_15ssp"
+        app:icon="@drawable/ic_baseline_exit_to_app_24"
+        app:iconGravity="end"
+        app:iconTint="@color/black"
+        app:layout_constraintBottom_toBottomOf="@+id/textView"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/textView" />
+
+    <com.google.android.material.circularreveal.cardview.CircularRevealCardView
+        android:id="@+id/name"
+        style="@style/Widget.Material3.CardView.Filled"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_50sdp"
+        android:layout_marginHorizontal="@dimen/_20sdp"
+        android:layout_marginTop="@dimen/_100sdp"
+        android:backgroundTint="@color/white"
+        android:orientation="horizontal"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView">
+
+        <ImageView
+            android:layout_width="@dimen/_15sdp"
+            android:layout_height="@dimen/_15sdp"
+            android:layout_gravity="center_vertical"
+            android:layout_marginLeft="@dimen/_20sdp"
+            android:src="@drawable/profile" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:fontFamily="@font/gothampro"
+            android:text="Стихин Александр"
+            android:textSize="@dimen/_10ssp"
+            android:textColor="@color/black" />
+    </com.google.android.material.circularreveal.cardview.CircularRevealCardView>
+
+    <com.google.android.material.circularreveal.cardview.CircularRevealCardView
+        android:id="@+id/email"
+        style="@style/Widget.Material3.CardView.Filled"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_50sdp"
+        android:layout_marginHorizontal="@dimen/_20sdp"
+        android:layout_marginTop="@dimen/_15sdp"
+        android:backgroundTint="@color/white"
+        android:orientation="horizontal"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/name">
+
+        <ImageView
+            android:layout_width="@dimen/_15sdp"
+            android:layout_height="@dimen/_15sdp"
+            android:layout_gravity="center_vertical"
+            android:layout_marginLeft="@dimen/_20sdp"
+            android:src="@drawable/ic_baseline_email_24" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:fontFamily="@font/gothampro"
+            android:textSize="@dimen/_10ssp"
+            android:text="stihinaleksander@yandex.ru"
+            android:textColor="@color/black" />
+    </com.google.android.material.circularreveal.cardview.CircularRevealCardView>
+
+    <com.google.android.material.circularreveal.cardview.CircularRevealCardView
+        android:id="@+id/pass"
+        style="@style/Widget.Material3.CardView.Filled"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_50sdp"
+        android:layout_marginHorizontal="@dimen/_20sdp"
+        android:layout_marginTop="@dimen/_15sdp"
+        android:backgroundTint="@color/white"
+
+        android:orientation="horizontal"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/email">
+
+        <ImageView
+            android:layout_width="@dimen/_15sdp"
+            android:layout_height="@dimen/_15sdp"
+            android:layout_gravity="center_vertical"
+            android:layout_marginLeft="@dimen/_20sdp"
+            android:src="@drawable/ic_baseline_grid_3x3_24" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:textSize="@dimen/_10ssp"
+            android:fontFamily="@font/gothampro"
+            android:text="dsjfsdkfsdjf213124"
+            android:textColor="@color/black" />
+    </com.google.android.material.circularreveal.cardview.CircularRevealCardView>
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/editBtn"
+        android:layout_width="wrap_content"
+        android:layout_height="@dimen/_50sdp"
+        android:layout_marginTop="@dimen/_15sdp"
+        android:backgroundTint="@color/white"
+        android:fontFamily="@font/gothampro"
+        android:text="Изменить"
+        android:textColor="@color/black"
+        android:textSize="@dimen/_10ssp"
+        app:cornerRadius="@dimen/_10sdp"
+        app:icon="@drawable/ic_baseline_mode_edit"
+        app:iconTint="@color/black"
+        app:layout_constraintStart_toStartOf="@+id/pass"
+        app:layout_constraintTop_toBottomOf="@+id/pass" />
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/copyBtn"
+        android:layout_width="wrap_content"
+        android:layout_height="@dimen/_50sdp"
+        android:backgroundTint="@color/white"
+        android:fontFamily="@font/gothampro"
+        android:text="Скопировать id"
+        android:textColor="@color/black"
+        android:textSize="@dimen/_10ssp"
+        app:cornerRadius="@dimen/_10sdp"
+        app:layout_constraintBottom_toBottomOf="@+id/editBtn"
+        app:layout_constraintEnd_toEndOf="@+id/pass"
+        app:layout_constraintTop_toTopOf="@+id/editBtn" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

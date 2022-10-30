@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/my_nav"
+    app:startDestination="@id/collection">
+
+    <fragment
+        android:id="@+id/collection"
+        android:name="com.example.hackathon.Collection"
+        android:label="fragment_collection"
+        tools:layout="@layout/fragment_collection">
+        <action
+            android:id="@+id/action_collection_to_profile"
+            app:destination="@id/profile" />
+        <action
+            android:id="@+id/action_collection_to_card"
+            app:destination="@id/card" />
+        <action
+            android:id="@+id/action_collection_to_addCard"
+            app:destination="@id/addCard" />
+        <action
+            android:id="@+id/action_collection_to_tradeList"
+            app:destination="@id/tradeList" />
+        <action
+            android:id="@+id/action_collection_self"
+            app:destination="@id/collection" />
+        <action
+            android:id="@+id/action_collection_to_addCard2"
+            app:destination="@id/addCard" />
+    </fragment>
+    <fragment
+        android:id="@+id/addCard"
+        android:name="com.example.hackathon.AddCard"
+        android:label="fragment_add_card"
+        tools:layout="@layout/fragment_add_card">
+        <action
+            android:id="@+id/action_addCard_to_collection"
+            app:destination="@id/collection" />
+        <action
+            android:id="@+id/action_addCard_to_card"
+            app:destination="@id/card" />
+        <action
+            android:id="@+id/action_addCard_to_collection2"
+            app:destination="@id/collection" />
+        <action
+            android:id="@+id/action_addCard_to_profile"
+            app:destination="@id/profile" />
+        <action
+            android:id="@+id/action_addCard_to_card2"
+            app:destination="@id/card" />
+        <action
+            android:id="@+id/action_addCard_to_tradeList"
+            app:destination="@id/tradeList" />
+    </fragment>
+    <fragment
+        android:id="@+id/card"
+        android:name="com.example.hackathon.Card"
+        android:label="fragment_card"
+        tools:layout="@layout/fragment_card">
+        <action
+            android:id="@+id/action_card_to_collection"
+            app:destination="@id/collection" />
+        <action
+            android:id="@+id/action_card_self"
+            app:destination="@id/card" />
+    </fragment>
+    <fragment
+        android:id="@+id/profile"
+        android:name="com.example.hackathon.Profile"
+        android:label="fragment_profile"
+        tools:layout="@layout/fragment_profile">
+        <action
+            android:id="@+id/action_profile_to_collection"
+            app:destination="@id/collection" />
+        <action
+            android:id="@+id/action_profile_to_editProfile"
+            app:destination="@id/editProfile" />
+        <action
+            android:id="@+id/action_profile_to_tradeList"
+            app:destination="@id/tradeList" />
+    </fragment>
+    <fragment
+        android:id="@+id/editProfile"
+        android:name="com.example.hackathon.EditProfile"
+        android:label="fragment_edit_profile"
+        tools:layout="@layout/fragment_edit_profile">
+        <action
+            android:id="@+id/action_editProfile_to_profile"
+            app:destination="@id/profile" />
+    </fragment>
+    <fragment
+        android:id="@+id/tradeList"
+        android:name="com.example.hackathon.TradeList"
+        android:label="fragment_trade_list"
+        tools:layout="@layout/fragment_trade_list">
+        <action android:id="@+id/action_tradeList_to_tradeInfo" />
+
+        <action
+            android:id="@+id/action_tradeList_to_collection"
+            app:destination="@id/collection" />
+        <action
+            android:id="@+id/action_tradeList_to_profile"
+            app:destination="@id/profile" />
+        <action android:id="@+id/action_tradeList_to_tradeInfo2" />
+
+    </fragment>
+
+</navigation>
